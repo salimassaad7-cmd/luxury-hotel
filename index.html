@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxury Hotel Experience</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* VIDEO BACKGROUND */
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* VERY IMPORTANT */
+            z-index: -2;
+        }
+
+        /* DARK CINEMATIC OVERLAY */
+        .overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: -1;
+        }
+
+        /* LOGIN BOX */
+        .login-box {
+            background: rgba(255,255,255,0.12);
+            padding: 50px;
+            border-radius: 20px;
+            width: 320px;
+            text-align: center;
+
+            backdrop-filter: blur(15px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        input::placeholder {
+            color: #eee;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+            background: #c6a77d;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #a88b65;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- VIDEO -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="C:\Users\salim\Downloads\A3.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- LOGIN -->
+    <div class="login-box">
+        <h2>LUXURY HOTEL</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button>Enter Experience</button>
+    </div>
+
+</body>
+</html>
